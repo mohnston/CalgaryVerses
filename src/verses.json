@@ -1,0 +1,38 @@
+[
+  {
+    "book": "Psalm",
+    "chapter": 119,
+    "startVerse": 105,
+    "endVerse": 105,
+    "text": "Your word is a lamp to my feet and a light to my path.",
+    "difficulty": 1,
+    "categories": ["guidance","word"]
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "startVerse": 31,
+    "endVerse": 31,
+    "text": "Those who hope in the Lord will renew their strength.",
+    "difficulty": 1,
+    "categories": ["hope","strength"]
+  },
+  {
+    "book": "1 Corinthians",
+    "chapter": 16,
+    "startVerse": 14,
+    "endVerse": 14,
+    "text": "Let all that you do be done in love.",
+    "difficulty": 2,
+    "categories": ["love","ethics"]
+  },
+  {
+    "book": "Psalm",
+    "chapter": 145,
+    "startVerse": 18,
+    "endVerse": 18,
+    "text": "The Lord is near to all who call on him.",
+    "difficulty": 2,
+    "categories": ["presence","prayer"]
+  }
+]
