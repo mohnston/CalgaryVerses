@@ -1,6 +1,26 @@
 # CalgaryVerses
 
 A small static web starter project.
+It's purpose is help Bible students recall where Bible verses are located. It should be engaging and fun.
+It should be playable on phone or tablet format. Keep the need for scrolling to a minimum.
+Scores or history for the user should be kept on their local device. No need to create user accounts or require login.
+
+In the following games a "verse" may be one or multiple contiguous verses.
+1. Scripture recall
+	a. Show the player a verse
+	b. User guesses Book/Chapter
+2. Scripture Match
+	a. Show the player a verse
+	b. Show user 3 options
+	c. User selects the option that is source of verse
+3. Book Order
+	a. Arrange the books in order
+	b. User is shown a list of Bible books and must select them in order of their appearance in the Bible
+
+I would like verses used in the game to be stored in a file. It can be imported or exported during a session. Users can CRUD verses. 
+The game will have a theme that is relevant to Calgary, Canada. I have images that I would like to randomly display on the game's home screen. 
+I will need a service that will host this app.
+
 
 ## Run
 
