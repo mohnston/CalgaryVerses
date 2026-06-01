@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CalgaryVerses</title>
+    <link rel="stylesheet" href="./src/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#game-area">Skip to main content</a>
+    <main class="app-shell">
+      <header class="home-header">
+        <img id="homeImage" alt="Calgary" />
+        <div class="home-overlay">
+          <img class="home-logo" src="assets/images/logo_calgary_lineart_1.png" alt="Calgary logo" />
+          <h1>Scripture Trainer</h1>
+          <p class="subtitle">Where are those words?! Tap a button to start a game.</p>
+
+          <!-- hidden persistence selects kept for JS hooks -->
+          <select id="selectDifficulty" class="hidden">
+            <option value="1">Easy</option>
+            <option value="2" selected>Medium</option>
+            <option value="3">Hard</option>
+            <option value="all">All</option>
+          </select>
+
+          <div id="gameControlsShared" class="game-controls home-controls">
+            <div class="difficulty-pills" role="tablist" aria-label="Difficulty">
+              <button type="button" class="diff-pill pill-easy" data-diff="1" role="tab" aria-pressed="false">Easy</button>
+              <button type="button" class="diff-pill pill-regular" data-diff="2" role="tab" aria-pressed="false">Regular</button>
+              <button type="button" class="diff-pill pill-hard" data-diff="3" role="tab" aria-pressed="false">Hard</button>
+              <button type="button" class="diff-pill pill-any" data-diff="all" role="tab" aria-pressed="false">Any</button>
+            </div>
+            <div class="category-control">
+              <select id="selectCategory" aria-label="Select category">
+                <option value="all">All Categories</option>
+              </select>
+            </div>
+            <div id="difficultyCue" class="difficulty-cue" aria-live="polite">Difficulty: Regular</div>
+          </div>
+
+          <div class="home-actions large">
+            <button id="playRecall" class="big-cta" aria-label="Start Verse Recall">Verse Recall</button>
+            <button id="playMatch" class="big-cta" aria-label="Start Verse Match">Verse Match</button>
+            <button id="playOrder" class="big-cta" aria-label="Start Book Order">Book Order</button>
+          </div>
+
+          <div class="center-row">
+            <button id="viewScores" class="gold-btn">View Scores</button>
+          </div>
+
+          <div class="home-stats-summary">
+            <div class="left">Streak: <strong id="homeStreak">—</strong> Days</div>
+            <div class="right">Accuracy: <strong id="homeAccuracy">—</strong></div>
+          </div>
+
+          <div class="center-row">
+            <button id="manageVerses" class="gold-btn">Manage Verses</button>
+          </div>
+        </div>
+      </header>
+
+      <section id="game-area" class="verse-panel">
+        <!-- Home / Game content will be rendered here by JS -->
+        <div id="homeIntro"></div>
+
+        <!-- shared controls moved into Recall section to ensure visibility -->
+
+        <section id="recall" class="game-section hidden">
+          <div class="match-hero">
+            <img id="recallImage" alt="Calgary scene" />
+          </div>
+          <h2>Scripture Recall</h2>
+          <div id="recallDifficultyCue" class="screen-difficulty-cue" aria-live="polite">Difficulty: Regular</div>
+          <div class="match-topline" aria-live="polite">
+            <span id="recallRound">Round 1 of 5</span>
+            <span id="recallScore">Score 0</span>
+          </div>
+          
+          <div id="recallVerse" class="verse-display"></div>
+          <form id="recallForm">
+            <label id="recallBookWrap">Book
+              <select id="recallBookSelect" name="book" aria-label="Select book"></select>
+            </label>
+            <label id="recallChapterWrap">Chapter
+              <input id="recallChapter" name="chapter" type="number" min="1" inputmode="numeric" aria-label="Chapter number" />
+            </label>
+            <label id="recallVerseNumberWrap">Verse(s)
+              <input id="recallVerseNumber" name="verseNumber" type="number" min="1" inputmode="numeric" aria-label="Verse number" />
+            </label>
+            <div class="form-actions">
+              <button id="recallSubmit" type="submit">Submit</button>
+              <button id="recallNext" type="button">Next</button>
+              <button id="recallSkip" type="button">Skip</button>
+              <button id="recallBack" type="button">Back</button>
+            </div>
+          </form>
+          <div id="recallFeedback" aria-live="polite"></div>
+        </section>
+
+        <section id="match" class="game-section hidden">
+          <div class="match-hero">
+            <img id="matchImage" alt="Calgary scene" />
+          </div>
+          <h2>Scripture Match</h2>
+          <div id="matchDifficultyCue" class="screen-difficulty-cue" aria-live="polite">Difficulty: Regular</div>
+          <div class="match-topline" aria-live="polite">
+            <span id="matchRound">Round 1 of 5</span>
+            <span id="matchScore">Score 0</span>
+          </div>
+          <div id="matchVerse" class="verse-display"></div>
+          <div id="matchOptions" class="options"></div>
+          <div id="matchFeedback" class="match-feedback" aria-live="polite"></div>
+          <div class="form-actions">
+            <button id="matchNext" type="button">Next</button>
+            <button id="matchSkip" type="button">Skip</button>
+            <button id="matchBack" type="button">Back</button>
+          </div>
+        </section>
+
+        <section id="order" class="game-section hidden">
+          <h2>Book Order</h2>
+          <p>Arrange the books into the correct canonical order. Drag items to reorder.</p>
+          <div class="order-controls">
+            <button id="orderStart" class="small-btn">Start</button>
+            <button id="orderShuffle" class="small-btn">Shuffle</button>
+            <button id="orderCheck" class="small-btn">Check</button>
+            <button id="orderReset" class="small-btn">Reset</button>
+            <div class="order-stats">Time: <span id="orderTimer">0</span>s — Correct: <span id="orderCorrect">0</span>/7</div>
+          </div>
+          <ul id="orderList" class="order-list" aria-label="Book order list"></ul>
+          <div id="orderResult" aria-live="polite"></div>
+          <div class="form-actions">
+            <button id="orderBack" type="button">Back</button>
+          </div>
+        </section>
+
+        <section id="stats" class="game-section hidden">
+          <h2>Scores & History</h2>
+          <div class="stats-controls">
+            <label>Mode
+              <select id="statsMode">
+                <option value="all">All</option>
+                <option value="recall">Recall</option>
+                <option value="match">Match</option>
+                <option value="order">Order</option>
+              </select>
+            </label>
+            <label>Since
+              <select id="statsSince">
+                <option value="7">7 days</option>
+                <option value="30">30 days</option>
+                <option value="365">1 year</option>
+                <option value="all">All time</option>
+              </select>
+            </label>
+          </div>
+          <div id="statsList" class="stats-list"></div>
+          <div class="form-actions">
+            <button id="statsBack" type="button">Back</button>
+            <button id="statsClear" type="button">Clear History</button>
+          </div>
+        </section>
+
+        <section id="manage" class="game-section hidden">
+          <h2>Manage Verses</h2>
+          <div class="manage-grid">
+            <div class="manage-placeholder">
+              <p>Use the controls to create or edit verses. The editor opens in a modal so it fits on small screens.</p>
+              <div class="form-actions">
+                <button id="manageNew" class="small-btn">New Verse</button>
+                <button id="manageClose" type="button">Back</button>
+              </div>
+            </div>
+
+            <div class="manage-list-wrap">
+              <div class="manage-controls">
+                  <input id="manageFilter" placeholder="Filter by book or category" />
+                  <div class="manage-import-export">
+                    <button id="exportVerses" class="small-btn">Export</button>
+                    <button id="importVerses" class="small-btn">Import</button>
+                    <input id="importFile" type="file" accept="application/json" class="hidden" />
+                  </div>
+              </div>
+              <div id="manageList" class="manage-list" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Modal editor for Manage Verses -->
+        <div id="manageModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="manageModalTitle">
+          <div class="modal-backdrop" data-dismiss="modal"></div>
+          <div class="modal-dialog">
+            <h3 id="manageModalTitle">Edit Verse</h3>
+            <form id="manageForm" class="manage-form">
+              <input type="hidden" id="manageId" />
+              <label>Book
+                <input id="manageBook" list="manageBookList" type="text" required aria-label="Book name" />
+                <datalist id="manageBookList"></datalist>
+              </label>
+              <label>Chapter
+                <input id="manageChapter" type="number" min="1" required aria-label="Chapter number" />
+              </label>
+              <label>Start Verse
+                <input id="manageStartVerse" type="number" min="1" aria-label="Start verse number" />
+              </label>
+              <label>End Verse (optional)
+                <input id="manageEndVerse" type="number" min="1" aria-label="End verse number" />
+              </label>
+              <label>Text
+                <textarea id="manageText" rows="3" required aria-label="Verse text"></textarea>
+              </label>
+              <label>Difficulty
+                <select id="manageDifficulty">
+                  <option value="1">Easy</option>
+                  <option value="2">Medium</option>
+                  <option value="3">Hard</option>
+                </select>
+              </label>
+              <label>Categories (comma separated)
+                <input id="manageCategories" type="text" aria-label="Categories" />
+              </label>
+              <div class="form-actions">
+                <button id="manageSave" type="submit">Save</button>
+                <button id="manageCancel" type="button">Cancel</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./src/main.js"></script>
+  </body>
+</html>

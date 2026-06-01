@@ -1,0 +1,38 @@
+[
+  {
+    "book": "Psalm",
+    "chapter": 119,
+    "startVerse": 105,
+    "endVerse": 105,
+    "text": "Your word is a lamp to my foot, And a light for my path.",
+    "difficulty": 1,
+    "categories": ["guidance","word"]
+  },
+  {
+    "book": "Isaiah",
+    "chapter": 40,
+    "startVerse": 31,
+    "endVerse": 31,
+    "text": "But those hoping in Jehovah will regain power. They will soar on wings like eagles. They will run and not grow weary; They will walk and not tire out.",
+    "difficulty": 1,
+    "categories": ["hope","strength"]
+  },
+  {
+    "book": "1 Corinthians",
+    "chapter": 16,
+    "startVerse": 14,
+    "endVerse": 14,
+    "text": "Let everything you do be done with love.",
+    "difficulty": 2,
+    "categories": ["love","ethics"]
+  },
+  {
+    "book": "Psalm",
+    "chapter": 145,
+    "startVerse": 18,
+    "endVerse": 18,
+    "text": "Jehovah is near to all those calling on him, To all who call on him in truth.",
+    "difficulty": 2,
+    "categories": ["presence","prayer"]
+  }
+]
