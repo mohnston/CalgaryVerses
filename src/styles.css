@@ -160,7 +160,7 @@ blockquote {
 cite { font-size: 0.9rem; margin-top: 8px; display:block; }
 
 /* Reduce header image height slightly on small screens */
-.home-header img { height: 180px; }
+.home-header img { height: 90px; }
 
 /* Ensure overlay content doesn't push too much */
 .home-overlay { inset: 12px; }
@@ -185,7 +185,7 @@ cite { font-size: 0.9rem; margin-top: 8px; display:block; }
   background: linear-gradient(180deg,#072b57 0%, #062146 100%);
   border-radius: 14px;
   padding: 26px 18px 32px;
-  min-height: 640px;
+  min-height: 320px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -462,7 +462,7 @@ input:invalid { border-color: rgba(184,63,47,0.9); }
   background: linear-gradient(180deg,#072b57 0%, #062146 100%);
   border-radius: 14px;
   padding: 26px 18px 32px;
-  min-height: 640px;
+  min-height: 320px;
   display: flex;
   align-items: flex-start;
   justify-content: center;
