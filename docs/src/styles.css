@@ -498,6 +498,13 @@ input:invalid { border-color: rgba(184,63,47,0.9); }
 .pill-regular { background: #D65A09; color: #fff; }
 .pill-hard { background: #d8432a; color: #fff; }
 .pill-any { background: #fff; color: #0b2b3d; font-weight:800; }
+.pill-any.active,
+.pill-any[aria-pressed="true"],
+.pill-any:hover,
+.pill-any:focus {
+  background: #fff !important;
+  color: #0b2b3d !important;
+}
 .category-control select { min-width: 180px; background: rgba(255,255,255,0.95); color: #0b2b3d; padding:8px 10px; border-radius:8px; border: none; }
 .difficulty-cue,
 .screen-difficulty-cue {

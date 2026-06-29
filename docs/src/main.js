@@ -573,13 +573,14 @@ function buildMatchDeck() {
 
 function buildMatchOptions(verse) {
   const correctReference = formatReference(verse);
-  const sameCategory = verses.filter(v => {
+  const optionPool = getFilteredVerses();
+  const sameCategory = optionPool.filter(v => {
     if (v === verse || formatReference(v) === correctReference) return false;
     if (!Array.isArray(v.categories) || !Array.isArray(verse.categories)) return false;
     return v.categories.some(cat => verse.categories.map(c => c.toLowerCase()).includes(String(cat).toLowerCase()));
   });
-  const sameDifficulty = verses.filter(v => v !== verse && formatReference(v) !== correctReference && Number(v.difficulty) === Number(verse.difficulty));
-  const remaining = verses.filter(v => v !== verse && formatReference(v) !== correctReference);
+  const sameDifficulty = optionPool.filter(v => v !== verse && formatReference(v) !== correctReference && Number(v.difficulty) === Number(verse.difficulty));
+  const remaining = optionPool.filter(v => v !== verse && formatReference(v) !== correctReference);
   const candidates = shuffleArray([...sameCategory, ...sameDifficulty, ...remaining]);
   const refs = new Set([correctReference]);
   candidates.forEach(v => {
@@ -904,6 +905,32 @@ function saveUserVerses(list) {
   try { localStorage.setItem(USER_VERSES_KEY, JSON.stringify(list)); } catch(e) { console.warn('save user verses failed', e); }
 }
 
+function verseReferenceKey(item) {
+  if (!item) return '';
+  const book = String(item.book || '').trim().toLowerCase();
+  const chapter = Number(item.chapter) || '';
+  const startVerse = item.startVerse != null && item.startVerse !== '' ? Number(item.startVerse) : '';
+  const endVerse = item.endVerse != null && item.endVerse !== '' ? Number(item.endVerse) : '';
+  return `${book}|${chapter}|${startVerse}|${endVerse}`;
+}
+
+function hasDuplicateVerseReference(list, candidate, currentId = '') {
+  const candidateKey = verseReferenceKey(candidate);
+  return list.some(item => String(item.id) !== String(currentId) && verseReferenceKey(item) === candidateKey);
+}
+
+function hasCatalogVerseReference(candidate, currentId = '') {
+  const candidateKey = verseReferenceKey(candidate);
+  const currentSaved = currentId
+    ? loadUserVerses().find(item => String(item.id) === String(currentId))
+    : null;
+
+  return verses.some(item => {
+    if (verseReferenceKey(item) !== candidateKey) return false;
+    return !currentSaved || verseReferenceKey(currentSaved) !== candidateKey;
+  });
+}
+
 function loadUserVersesIntoMemory() {
   const users = loadUserVerses();
   if (users && users.length) {
@@ -967,6 +994,11 @@ function handleManageSave(ev) {
   const cats = ($('#manageCategories').value || '').split(',').map(s=>s.trim()).filter(Boolean);
   if (!book || !chapter || !text) { alert('Please complete Book, Chapter and Text'); return; }
   const list = loadUserVerses();
+  const candidate = { book, chapter, startVerse, endVerse };
+  if (hasDuplicateVerseReference(list, candidate, id) || hasCatalogVerseReference(candidate, id)) {
+    alert('That verse reference already exists. Book, Chapter, Start Verse, and End Verse must be unique.');
+    return;
+  }
   if (id) {
     // edit
     const idx = list.findIndex(x=>String(x.id)===String(id));
@@ -1084,8 +1116,8 @@ function importVersesArray(arr) {
   arr.forEach(item => {
     const mapped = mapImportedEntry(item);
     if (!mapped) return;
-    // dedupe by book/chapter/start/end/text
-    const dup = existing.find(x => x.book===mapped.book && String(x.chapter)===String(mapped.chapter) && String(x.startVerse||'')===String(mapped.startVerse||'') && String(x.endVerse||'')===String(mapped.endVerse||'') && x.text===mapped.text);
+    // dedupe by book/chapter/start/end
+    const dup = hasDuplicateVerseReference(existing, mapped) || hasCatalogVerseReference(mapped);
     if (!dup) { existing.push(mapped); added++; }
   });
   if (added) {
