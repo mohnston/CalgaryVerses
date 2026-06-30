@@ -1269,4 +1269,4 @@ function checkOrder() {
   if (correctCount === orderCorrect.length) { clearInterval(orderTimerId); }
 }
 
-function resetOrderGame() { clearInterval(orderTimerId); orderSeconds = 0; const t = $('#orderTimer'); if (t) t.textContent = '0'; orderCurrent = []; orderCorrect = []; $('#orderList').innerHTML = ''; $('#orderResult').textContent = ''; $('#orderCorrect').textContent = '0'; }
+function resetOrderGame() { startOrderGame(); }
