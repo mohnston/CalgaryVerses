@@ -313,13 +313,13 @@ function updateDifficultyCue(context='') {
   const effective = context === 'recall' ? getSupportedDifficulty() : selected;
   const selectedLabel = DIFFICULTY_LABELS[selected] || DIFFICULTY_LABELS['2'];
   const effectiveLabel = DIFFICULTY_LABELS[effective] || DIFFICULTY_LABELS['2'];
-  const text = selected === effective ? `Difficulty: ${selectedLabel}` : `Difficulty: ${effectiveLabel} (${selectedLabel} selected)`;
+  const text = selected === effective ? selectedLabel : `${effectiveLabel} (${selectedLabel} selected)`;
   const cue = $('#difficultyCue');
   if (cue) cue.textContent = text;
   const recallCue = $('#recallDifficultyCue');
-  if (recallCue) recallCue.textContent = context === 'recall' ? text : `Difficulty: ${DIFFICULTY_LABELS[getSupportedDifficulty()] || DIFFICULTY_LABELS['2']}`;
+  if (recallCue) recallCue.textContent = context === 'recall' ? text : (DIFFICULTY_LABELS[getSupportedDifficulty()] || DIFFICULTY_LABELS['2']);
   const matchCue = $('#matchDifficultyCue');
-  if (matchCue) matchCue.textContent = context === 'match' ? text : `Difficulty: ${selectedLabel}`;
+  if (matchCue) matchCue.textContent = context === 'match' ? text : selectedLabel;
 }
 
 // --- Stats UI & persistence for stats filter ---

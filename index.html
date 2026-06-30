@@ -14,7 +14,7 @@
         <div class="home-overlay">
           <img class="home-logo" src="assets/images/logo_calgary_lineart_1.png" alt="Calgary logo" />
           <h1>Scripture Trainer</h1>
-          <p class="subtitle">Where are those words?! Tap a blue bar below to start a game.</p>
+          <p class="subtitle">Tap a blue bar below to start a game.</p>
 
           <!-- hidden persistence selects kept for JS hooks -->
           <select id="selectDifficulty" class="hidden">
@@ -36,7 +36,6 @@
                 <option value="all">All Categories</option>
               </select>
             </div>
-            <div id="difficultyCue" class="difficulty-cue" aria-live="polite">Difficulty: Regular</div>
           </div>
 
           <div class="home-actions large">
@@ -71,7 +70,6 @@
             <img id="recallImage" alt="Calgary scene" />
           </div>
           <h2>Scripture Recall</h2>
-          <div id="recallDifficultyCue" class="screen-difficulty-cue" aria-live="polite">Difficulty: Regular</div>
           <div class="match-topline" aria-live="polite">
             <span id="recallRound">Round 1 of 5</span>
             <span id="recallScore">Score 0</span>
@@ -103,7 +101,6 @@
             <img id="matchImage" alt="Calgary scene" />
           </div>
           <h2>Scripture Match</h2>
-          <div id="matchDifficultyCue" class="screen-difficulty-cue" aria-live="polite">Difficulty: Regular</div>
           <div class="match-topline" aria-live="polite">
             <span id="matchRound">Round 1 of 5</span>
             <span id="matchScore">Score 0</span>
@@ -120,10 +117,8 @@
 
         <section id="order" class="game-section hidden">
           <h2>Book Order</h2>
-          <p>Arrange the books into the correct canonical order. Drag items to reorder.</p>
+          <p>Drag the books into canonical order.</p>
           <div class="order-controls">
-            <button id="orderStart" class="small-btn">Start</button>
-            <button id="orderShuffle" class="small-btn">Shuffle</button>
             <button id="orderCheck" class="small-btn">Check</button>
             <button id="orderReset" class="small-btn">Reset</button>
             <div class="order-stats">Time: <span id="orderTimer">0</span>s — Correct: <span id="orderCorrect">0</span>/7</div>

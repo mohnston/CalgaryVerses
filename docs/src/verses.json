@@ -1,38 +1,750 @@
 [
   {
+    "id": 1779395724147,
+    "book": "Genesis",
+    "chapter": 1,
+    "startVerse": 1,
+    "endVerse": 1,
+    "text": "In the beginning God created the heavens and the earth.",
+    "difficulty": "1",
+    "categories": [
+      "Jehovah"
+    ]
+  },
+  {
+    "id": 1779399663547,
+    "book": "John",
+    "chapter": 3,
+    "startVerse": 16,
+    "endVerse": 16,
+    "text": "For God loved the world so much that he gave his only-begotten Son, so that everyone exercising faith in him might not be destroyed but have everlasting life.",
+    "difficulty": "1",
+    "categories": [
+      "Love",
+      "Salvation",
+      "Jehovah",
+      "Jesus"
+    ]
+  },
+  {
+    "id": 1779399663966,
+    "book": "Philippians",
+    "chapter": 4,
+    "startVerse": 13,
+    "endVerse": 13,
+    "text": "For all things I have the strength through the one who gives me power.",
+    "difficulty": 0,
+    "categories": [
+      "Strength",
+      "Faith"
+    ]
+  },
+  {
+    "id": 1779399663499,
+    "book": "Psalm",
+    "chapter": 23,
+    "startVerse": 1,
+    "endVerse": 1,
+    "text": "Jehovah is my Shepherd. I will lack nothing.",
+    "difficulty": "1",
+    "categories": [
+      "Faith",
+      "Jehovah"
+    ]
+  },
+  {
+    "id": 1779399663368,
+    "book": "Jeremiah",
+    "chapter": 29,
+    "startVerse": 11,
+    "endVerse": 11,
+    "text": "For I well know the thoughts that I am thinking toward you,' declares Jehovah, 'thoughts of peace, and not of calamity, to give you a future and a hope.",
+    "difficulty": "2",
+    "categories": [
+      "Hope",
+      "Promises"
+    ]
+  },
+  {
+    "id": 1779399663873,
+    "book": "Proverbs",
+    "chapter": 3,
+    "startVerse": 5,
+    "endVerse": 6,
+    "text": "Trust in Jehovah with all your heart, and do not rely on your own understanding. In all your ways take notice of him, and he will make your paths straight.",
+    "difficulty": "2",
+    "categories": [
+      "Faith",
+      "Wisdom"
+    ]
+  },
+  {
+    "id": 1779399663790,
+    "book": "Romans",
+    "chapter": 12,
+    "startVerse": 1,
+    "endVerse": 2,
+    "text": "Therefore, I appeal to you by the compassions of God, brothers, to present your bodies as a living sacrifice, holy and acceptable to God, a sacred service with your power of reason. And stop being molded by this system of things, but be transformed by making your mind over, so that you may prove to yourselves the good and acceptable and perfect will of God.",
+    "difficulty": "3",
+    "categories": [
+      "Wisdom",
+      "Character"
+    ]
+  },
+  {
+    "id": 1779399663734,
+    "book": "Psalm",
+    "chapter": 83,
+    "startVerse": 18,
+    "endVerse": 18,
+    "text": "May people know that you, whose name is Jehovah, You alone are the Most High over all the earth.",
+    "difficulty": "1",
+    "categories": [
+      "Jehovah"
+    ]
+  },
+  {
+    "id": 1779399663350,
+    "book": "Revelation",
+    "chapter": 21,
+    "startVerse": 3,
+    "endVerse": 4,
+    "text": "With that I heard a loud voice from the throne say: “Look! The tent of God is with mankind, and he will reside with them, and they will be his people. And God himself will be with them. And he will wipe out every tear from their eyes, and death will be no more, neither will mourning nor outcry nor pain be anymore. The former things have passed away.”",
+    "difficulty": "1",
+    "categories": [
+      "Promises",
+      "Peace",
+      "Hope"
+    ]
+  },
+  {
+    "id": 1779399663163,
+    "book": "Matthew",
+    "chapter": 14,
+    "startVerse": 16,
+    "endVerse": 16,
+    "text": "However, Jesus said to them: “They do not have to leave; you give them something to eat.”",
+    "difficulty": "2",
+    "categories": [
+      "Character",
+      "Faith"
+    ]
+  },
+  {
+    "id": 1779399663879,
+    "book": "Job",
+    "chapter": 33,
+    "startVerse": 1,
+    "endVerse": 2,
+    "text": "“But now, Job, please hear my words; Listen to everything I say. Look, please! I must open my mouth; My tongue must speak.",
+    "difficulty": 2,
+    "categories": [
+      "Wisdom",
+      "Counsel"
+    ]
+  },
+  {
+    "id": 1779399663487,
+    "book": "Proverbs",
+    "chapter": 27,
+    "startVerse": 12,
+    "endVerse": null,
+    "text": "The shrewd person sees the danger and conceals himself, But the inexperienced keep right on going and suffer the consequences.",
+    "difficulty": "2",
+    "categories": [
+      "Counsel",
+      "Wisdom"
+    ]
+  },
+  {
+    "id": 1779399663827,
+    "book": "Proverbs",
+    "chapter": 27,
+    "startVerse": 22,
+    "endVerse": null,
+    "text": "Even if you pound a fool with a pestle Like crushed grain in a mortar, His foolishness will not leave him.",
+    "difficulty": "3",
+    "categories": [
+      "Wisdom"
+    ]
+  },
+  {
+    "id": 1779399663540,
+    "book": "2 Timothy",
+    "chapter": 3,
+    "startVerse": 16,
+    "endVerse": 17,
+    "text": "All Scripture is inspired of God and beneficial for teaching, for reproving, for setting things straight, for disciplining in righteousness, so that the man of God may be fully competent, completely equipped for every good work.",
+    "difficulty": "1",
+    "categories": [
+      "Character",
+      "Counsel",
+      "Wisdom",
+      "Bible"
+    ]
+  },
+  {
+    "id": 1779399663399,
     "book": "Psalm",
     "chapter": 119,
     "startVerse": 105,
-    "endVerse": 105,
+    "endVerse": null,
     "text": "Your word is a lamp to my foot, And a light for my path.",
-    "difficulty": 1,
-    "categories": ["guidance","word"]
+    "difficulty": "1",
+    "categories": [
+      "Wisdom",
+      "Bible",
+      "Jehovah",
+      "Peace"
+    ]
   },
   {
+    "id": 1779399663927,
+    "book": "Matthew",
+    "chapter": 7,
+    "startVerse": 7,
+    "endVerse": 7,
+    "text": "“Keep on asking, and it will be given you; keep on seeking, and you will find; keep on knocking, and it will be opened to you;",
+    "difficulty": 0,
+    "categories": [
+      "Jehovah",
+      "Salvation",
+      "Prayer"
+    ]
+  },
+  {
+    "id": 1779399663369,
+    "book": "Romans",
+    "chapter": 15,
+    "startVerse": 3,
+    "endVerse": 4,
+    "text": "For all the things that were written beforehand were written for our instruction, so that through our endurance and through the comfort from the Scriptures we might have hope.",
+    "difficulty": 0,
+    "categories": [
+      "Jehovah",
+      "Bible",
+      "Comfort"
+    ]
+  },
+  {
+    "id": 1779399663302,
+    "book": "Acts",
+    "chapter": 8,
+    "startVerse": 28,
+    "endVerse": 30,
+    "text": "So the spirit said to Philip: “Go over and approach this chariot.” Philip ran alongside and heard him reading aloud Isaiah the prophet, and he said: “Do you actually know what you are reading?”",
+    "difficulty": "2",
+    "categories": [
+      "Jehovah",
+      "Bible",
+      "Jesus",
+      "Study"
+    ]
+  },
+  {
+    "id": 1779399663408,
+    "book": "Jeremiah",
+    "chapter": 29,
+    "startVerse": 11,
+    "endVerse": 12,
+    "text": "“‘For I well know the thoughts that I am thinking toward you,’ declares Jehovah, ‘thoughts of peace, and not of calamity, to give you a future and a hope. And you will call me and come and pray to me, and I will listen to you.’",
+    "difficulty": "2",
+    "categories": [
+      "Jehovah",
+      "Comfort",
+      "Promises",
+      "Future"
+    ]
+  },
+  {
+    "id": 1779399663580,
+    "book": "Acts",
+    "chapter": 17,
+    "startVerse": 11,
+    "endVerse": 11,
+    "text": "Now these were more noble-minded than those in Thessalonica, for they accepted the word with the greatest eagerness of mind, carefully examining the Scriptures daily to see whether these things were so.",
+    "difficulty": "3",
+    "categories": [
+      "Bible",
+      "Study"
+    ]
+  },
+  {
+    "id": 1779399663742,
+    "book": "John",
+    "chapter": 5,
+    "startVerse": 28,
+    "endVerse": 29,
+    "text": "Do not be amazed at this, for the hour is coming in which all those in the memorial tombs will hear his voice and come out, those who did good things to a resurrection of life, and those who practiced vile things to a resurrection of judgment.",
+    "difficulty": "1",
+    "categories": [
+      "Bible",
+      "Comfort",
+      "Future",
+      "Promises"
+    ]
+  },
+  {
+    "id": 1779399663762,
     "book": "Isaiah",
-    "chapter": 40,
-    "startVerse": 31,
-    "endVerse": 31,
-    "text": "But those hoping in Jehovah will regain power. They will soar on wings like eagles. They will run and not grow weary; They will walk and not tire out.",
-    "difficulty": 1,
-    "categories": ["hope","strength"]
+    "chapter": 33,
+    "startVerse": 24,
+    "endVerse": 24,
+    "text": "And no resident will say: “I am sick.” The people dwelling in the land will be pardoned for their error.",
+    "difficulty": "1",
+    "categories": [
+      "Bible",
+      "Comfort",
+      "Future",
+      "Promises"
+    ]
   },
   {
-    "book": "1 Corinthians",
-    "chapter": 16,
+    "id": 1779399663150,
+    "book": "Isaiah",
+    "chapter": 65,
+    "startVerse": 21,
+    "endVerse": 22,
+    "text": "They will build houses and live in them, And they will plant vineyards and eat their fruitage. They will not build for someone else to inhabit, Nor will they plant for others to eat. For the days of my people will be like the days of a tree, And the work of their hands my chosen ones will enjoy to the full.",
+    "difficulty": 0,
+    "categories": [
+      "Bible",
+      "Comfort",
+      "Future",
+      "Promises"
+    ]
+  },
+  {
+    "id": 1779399663814,
+    "book": "John",
+    "chapter": 4,
+    "startVerse": 24,
+    "endVerse": null,
+    "text": "God is a Spirit, and those worshipping him must worship with spirit and truth.",
+    "difficulty": "2",
+    "categories": [
+      "Jehovah",
+      "Study",
+      "Bible"
+    ]
+  },
+  {
+    "id": 1779399663360,
+    "book": "Psalm",
+    "chapter": 34,
+    "startVerse": 18,
+    "endVerse": null,
+    "text": "Jehovah is close to the brokenhearted; He saves those who are crushed in spirit.",
+    "difficulty": "2",
+    "categories": [
+      "Jehovah",
+      "Bible",
+      "Comfort",
+      "Promises",
+      "Love"
+    ]
+  },
+  {
+    "id": 1779399663388,
+    "book": "Proverbs",
+    "chapter": 27,
+    "startVerse": 11,
+    "endVerse": null,
+    "text": "Be wise, my son, and make my heart rejoice, So that I can make a reply to him who taunts me.",
+    "difficulty": "1",
+    "categories": [
+      "Jehovah",
+      "Bible",
+      "Character"
+    ]
+  },
+  {
+    "id": 1779399663629,
+    "book": "Luke",
+    "chapter": 11,
+    "startVerse": 13,
+    "endVerse": null,
+    "text": "Therefore, if you, although being wicked, know how to give good gifts to your children, how much more so will the Father in heaven give holy spirit to those asking him!”",
+    "difficulty": "2",
+    "categories": [
+      "Jehovah",
+      "Prayer",
+      "Comfort"
+    ]
+  },
+  {
+    "id": 1779399663243,
+    "book": "2 Peter",
+    "chapter": 1,
+    "startVerse": 20,
+    "endVerse": 21,
+    "text": "For you know this first, that no prophecy of Scripture springs from any private interpretation. For prophecy was at no time brought by man’s will, but men spoke from God as they were moved by holy spirit.",
+    "difficulty": "3",
+    "categories": [
+      "Jehovah",
+      "Future",
+      "Promises",
+      "Bible"
+    ]
+  },
+  {
+    "id": 1779399663383,
+    "book": "Romans",
+    "chapter": 1,
+    "startVerse": 20,
+    "endVerse": 20,
+    "text": "For his invisible qualities are clearly seen from the world’s creation onward, because they are perceived by the things made, even his eternal power and Godship, so that they are inexcusable.",
+    "difficulty": "2",
+    "categories": [
+      "Jehovah",
+      "Bible",
+      "Faith"
+    ]
+  },
+  {
+    "id": 1779399663400,
+    "book": "Psalm",
+    "chapter": 25,
     "startVerse": 14,
     "endVerse": 14,
-    "text": "Let everything you do be done with love.",
-    "difficulty": 2,
-    "categories": ["love","ethics"]
+    "text": "Close friendship with Jehovah belongs to those who fear him, And he makes his covenant known to them.",
+    "difficulty": "2",
+    "categories": [
+      "Jehovah",
+      "Bible",
+      "Faith"
+    ]
   },
   {
+    "id": 1779399663781,
+    "book": "James",
+    "chapter": 4,
+    "startVerse": 7,
+    "endVerse": 8,
+    "text": "Draw close to God, and he will draw close to you. Cleanse your hands, you sinners, and purify your hearts, you indecisive ones.",
+    "difficulty": "1",
+    "categories": [
+      "Jehovah",
+      "Bible",
+      "Faith",
+      "Study"
+    ]
+  },
+  {
+    "id": 1779399663830,
+    "book": "1 Peter",
+    "chapter": 5,
+    "startVerse": 7,
+    "endVerse": 7,
+    "text": "while you throw all your anxiety on him, because he cares for you.",
+    "difficulty": "2",
+    "categories": [
+      "Jehovah",
+      "Bible",
+      "Comfort"
+    ]
+  },
+  {
+    "id": 1779399663763,
     "book": "Psalm",
-    "chapter": 145,
+    "chapter": 94,
     "startVerse": 18,
+    "endVerse": 19,
+    "text": "When I said: “My foot is slipping,” Your loyal love, O Jehovah, kept supporting me. When anxieties overwhelmed me, You comforted and soothed me.",
+    "difficulty": "2",
+    "categories": [
+      "Jehovah",
+      "Bible",
+      "Comfort",
+      "Strength"
+    ]
+  },
+  {
+    "id": 1779399663323,
+    "book": "Acts",
+    "chapter": 10,
+    "startVerse": 34,
+    "endVerse": 35,
+    "text": "At this Peter began to speak, and he said: “Now I truly understand that God is not partial, but in every nation the man who fears him and does what is right is acceptable to him.",
+    "difficulty": "2",
+    "categories": [
+      "Jehovah",
+      "Bible",
+      "Comfort",
+      "Salvation"
+    ]
+  },
+  {
+    "id": 1779399663238,
+    "book": "Matthew",
+    "chapter": 6,
+    "startVerse": 9,
+    "endVerse": 13,
+    "text": "“You must pray, then, this way: “‘Our Father in the heavens, let your name be sanctified. Let your Kingdom come. Let your will take place, as in heaven, also on earth. Give us today our bread for this day; and forgive us our debts, as we also have forgiven our debtors. And do not bring us into temptation, but deliver us from the wicked one.’",
+    "difficulty": "1",
+    "categories": [
+      "Jehovah",
+      "Bible",
+      "Prayer"
+    ]
+  },
+  {
+    "id": 1779399663615,
+    "book": "1 John",
+    "chapter": 5,
+    "startVerse": 14,
+    "endVerse": 14,
+    "text": "And this is the confidence that we have toward him, that no matter what we ask according to his will, he hears us.",
+    "difficulty": "2",
+    "categories": [
+      "Bible",
+      "Prayer",
+      "Jehovah"
+    ]
+  },
+  {
+    "id": 1779399663423,
+    "book": "James",
+    "chapter": 1,
+    "startVerse": 5,
+    "endVerse": 5,
+    "text": "So if any one of you is lacking in wisdom, let him keep asking God, for he gives generously to all and without reproaching, and it will be given him.",
+    "difficulty": 0,
+    "categories": [
+      "Bible",
+      "Prayer",
+      "Jehovah"
+    ]
+  },
+  {
+    "id": 1779399663973,
+    "book": "Hebrews",
+    "chapter": 10,
+    "startVerse": 24,
+    "endVerse": 25,
+    "text": "And let us consider one another so as to incite to love and fine works, not forsaking our meeting together, as some have the custom, but encouraging one another, and all the more so as you see the day drawing near.",
+    "difficulty": "1",
+    "categories": [
+      "Bible",
+      "Study",
+      "Strength"
+    ]
+  },
+  {
+    "id": 1779399664033,
+    "book": "Isaiah",
+    "chapter": 48,
+    "startVerse": 17,
     "endVerse": 18,
-    "text": "Jehovah is near to all those calling on him, To all who call on him in truth.",
-    "difficulty": 2,
-    "categories": ["presence","prayer"]
+    "text": "This is what Jehovah says, your Repurchaser, the Holy One of Israel: “I, Jehovah, am your God, The One teaching you to benefit yourself, The One guiding you in the way you should walk. If only you would pay attention to my commandments! Then your peace would become just like a river And your righteousness like the waves of the sea.",
+    "difficulty": "2",
+    "categories": [
+      "Promises",
+      "Peace",
+      "Wisdom",
+      "Bible",
+      "Study"
+    ]
+  },
+  {
+    "id": 1779399663478,
+    "book": "Hebrews",
+    "chapter": 4,
+    "startVerse": 12,
+    "endVerse": 12,
+    "text": "For the word of God is alive and exerts power and is sharper than any two-edged sword and pierces even to the dividing of soul and spirit, and of joints from the marrow, and is able to discern thoughts and intentions of the heart.",
+    "difficulty": 0,
+    "categories": [
+      "Wisdom",
+      "Bible",
+      "Study"
+    ]
+  },
+  {
+    "id": 1780353914000,
+    "book": "1 Corinthians",
+    "chapter": 13,
+    "startVerse": 4,
+    "endVerse": 5,
+    "text": "Love is patient and kind. Love is not jealous. It does not brag, does not get puffed up, 5 does not behave indecently, does not look for its own interests, does not become provoked. It does not keep account of the injury.",
+    "difficulty": "2",
+    "categories": [
+      "Love"
+    ]
+  },
+  {
+    "id": 1780353979471,
+    "book": "1 Corinthians",
+    "chapter": 11,
+    "startVerse": 1,
+    "endVerse": null,
+    "text": "Become imitators of me, just as I am of Christ.",
+    "difficulty": "2",
+    "categories": [
+      "Jesus"
+    ]
+  },
+  {
+    "id": 1782317232397,
+    "book": "Daniel",
+    "chapter": 2,
+    "startVerse": 44,
+    "endVerse": null,
+    "text": "In the days of those kings the God of heaven will set up a kingdom that will never be destroyed. And this kingdom will not be passed on to any other people. It will crush and put an end to all these kingdoms, and it alone will stand forever,",
+    "difficulty": "1",
+    "categories": [
+      "Kingdom"
+    ]
+  },
+  {
+    "id": 1782318754935,
+    "book": "James",
+    "chapter": 1,
+    "startVerse": 5,
+    "endVerse": null,
+    "text": "So if any one of you is lacking in wisdom, let him keep asking God, for he gives generously to all and without reproaching, and it will be given him.",
+    "difficulty": "2",
+    "categories": [
+      "Prayer",
+      "Wisdom"
+    ]
+  },
+  {
+    "id": 1782319010258,
+    "book": "James",
+    "chapter": 1,
+    "startVerse": 3,
+    "endVerse": null,
+    "text": "When under trial, let no one say: “I am being tried by God.” For with evil things God cannot be tried, nor does he himself try anyone.",
+    "difficulty": "2",
+    "categories": [
+      "Jehovah",
+      "Trials"
+    ]
+  },
+  {
+    "id": 1782319068548,
+    "book": "1 John",
+    "chapter": 4,
+    "startVerse": 8,
+    "endVerse": null,
+    "text": "Whoever does not love has not come to know God, because God is love.",
+    "difficulty": "1",
+    "categories": [
+      "Love",
+      "Jehovah"
+    ]
+  },
+  {
+    "id": 1782319135995,
+    "book": "Matthew",
+    "chapter": 7,
+    "startVerse": 13,
+    "endVerse": 14,
+    "text": "Go in through the narrow gate, because broad is the gate and spacious is the road leading off into destruction, and many are going in through it whereas narrow is the gate and cramped the road leading off into life, and few are finding it.",
+    "difficulty": "2",
+    "categories": [
+      "Worship"
+    ]
+  },
+  {
+    "id": 1782319220255,
+    "book": "John",
+    "chapter": 13,
+    "startVerse": 34,
+    "endVerse": 35,
+    "text": "I am giving you a new commandment, that you love one another; just as I have loved you, you also love one another. By this all will know that you are my disciples—if you have love among yourselves.",
+    "difficulty": "1",
+    "categories": [
+      "Love",
+      "Worship"
+    ]
+  },
+  {
+    "id": 1782319319673,
+    "book": "John",
+    "chapter": 17,
+    "startVerse": 16,
+    "endVerse": null,
+    "text": "They are no part of the world, just as I am no part of the world.",
+    "difficulty": "2",
+    "categories": [
+      "Worship",
+      "Neutrality"
+    ]
+  },
+  {
+    "id": 1782319381596,
+    "book": "John",
+    "chapter": 17,
+    "startVerse": 17,
+    "endVerse": null,
+    "text": "Sanctify them by means of the truth; your word is truth.",
+    "difficulty": "2",
+    "categories": [
+      "Jehovah",
+      "Worship",
+      "Bible"
+    ]
+  },
+  {
+    "id": 1782319441894,
+    "book": "Mark",
+    "chapter": 7,
+    "startVerse": 9,
+    "endVerse": null,
+    "text": "Further, he said to them: “You skillfully disregard the commandment of God in order to keep your tradition.",
+    "difficulty": "3",
+    "categories": [
+      "Worship"
+    ]
+  },
+  {
+    "id": 1782319502621,
+    "book": "Isaiah",
+    "chapter": 42,
+    "startVerse": 8,
+    "endVerse": null,
+    "text": "I am Jehovah. That is my name; I give my glory to no one else, Nor my praise to graven images.",
+    "difficulty": "3",
+    "categories": [
+      "Jehovah"
+    ]
+  },
+  {
+    "id": 1782319558960,
+    "book": "Psalm",
+    "chapter": 104,
+    "startVerse": 33,
+    "endVerse": null,
+    "text": "I will sing to Jehovah throughout my life; I will sing praises to my God as long as I live.",
+    "difficulty": "3",
+    "categories": [
+      "Worship"
+    ]
+  },
+  {
+    "id": 1782319622219,
+    "book": "Psalm",
+    "chapter": 22,
+    "startVerse": 22,
+    "endVerse": null,
+    "text": "I will declare your name to my brothers; In the midst of the congregation I will praise you.",
+    "difficulty": "3",
+    "categories": [
+      "Worship"
+    ]
+  },
+  {
+    "id": 1782319690311,
+    "book": "Colossians",
+    "chapter": 1,
+    "startVerse": 15,
+    "endVerse": null,
+    "text": "He is the image of the invisible God, the firstborn of all creation",
+    "difficulty": "2",
+    "categories": [
+      "Jesus"
+    ]
   }
 ]
