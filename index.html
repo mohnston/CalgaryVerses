@@ -190,8 +190,9 @@
             <form id="manageForm" class="manage-form">
               <input type="hidden" id="manageId" />
               <label>Book
-                <input id="manageBook" list="manageBookList" type="text" required aria-label="Book name" />
-                <datalist id="manageBookList"></datalist>
+                <select id="manageBook" required aria-label="Book name">
+                  <option value="">Select a book</option>
+                </select>
               </label>
               <label>Chapter
                 <input id="manageChapter" type="number" min="1" required aria-label="Chapter number" />

@@ -96,7 +96,7 @@ function setRandomImage(imgEl) {
 }
 
 function populateManageBookList() {
-  const listEl = document.querySelector('#manageBookList');
+  const listEl = document.querySelector('#manageBook');
   if (!listEl) return;
   // gather unique book names from bookMap, verses and user verses
   const set = new Set();
@@ -104,9 +104,17 @@ function populateManageBookList() {
   verses.forEach(v => { if (v.book) set.add(v.book); });
   const users = loadUserVerses(); users.forEach(u => { if (u.book) set.add(u.book); });
   const books = Array.from(set);
-  listEl.innerHTML = '';
+  books.sort((a,b) => {
+    const ai = BIBLE_BOOKS.indexOf(a);
+    const bi = BIBLE_BOOKS.indexOf(b);
+    if (ai === -1 && bi === -1) return a.localeCompare(b);
+    if (ai === -1) return 1;
+    if (bi === -1) return -1;
+    return ai - bi;
+  });
+  listEl.innerHTML = '<option value="">Select a book</option>';
   books.forEach(b => {
-    const opt = document.createElement('option'); opt.value = b; listEl.appendChild(opt);
+    const opt = document.createElement('option'); opt.value = b; opt.textContent = b; listEl.appendChild(opt);
   });
 }
 
